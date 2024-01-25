@@ -7,7 +7,8 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
-             d:DesignWidth="1100">
+             d:DesignWidth="1100"
+             Name="dashboard">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8*" />
@@ -466,7 +467,7 @@
                 CornerRadius="20"
                 Background="#FFFFEEFA">
                 <Image
-                    Source="/Images/manwork.png"
+                    Source="{Binding ElementName=dashboard, Path=TopImage}"
                     Stretch="Uniform"
                     Height="150" />
             </Border>
@@ -492,7 +493,7 @@
                             <Run Text="King" FontWeight="SemiBold" FontSize="14"/>
                         </TextBlock.Inlines>
                     </TextBlock>
-                    <Image Source="/Images/profile.jpg" Width="30" Height="30"/>
+                    <Image Source="{Binding ElementName=dashboard, Path=BottomImage}" Width="30" Height="30"/>
                 </WrapPanel>
             </materialDesign:Card>
         </StackPanel>

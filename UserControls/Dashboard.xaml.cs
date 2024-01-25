@@ -20,6 +20,26 @@ namespace WPFDashboard3.UserControls
     /// </summary>
     public partial class Dashboard : UserControl
     {
+        public static readonly DependencyProperty TopImageProperty = DependencyProperty.Register(
+           "TopImage",
+           typeof(ImageSource),
+           typeof(Dashboard)
+        );
+        public static readonly DependencyProperty BottomImageProperty = DependencyProperty.Register(
+           "BottomImage",
+           typeof(ImageSource),
+           typeof(Dashboard)
+        );
+        public ImageSource TopImage
+        {
+            get => (ImageSource)GetValue(TopImageProperty);
+            set => SetValue(TopImageProperty, value);
+        }
+        public ImageSource BottomImage
+        {
+            get => (ImageSource)GetValue(BottomImageProperty);
+            set => SetValue(BottomImageProperty, value);
+        }
         public Dashboard()
         {
             InitializeComponent();

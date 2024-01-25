@@ -108,7 +108,8 @@
                                  HorizontalAlignment="Left"
                                  BorderBrush="{x:Null}"
                                  Background="{x:Null}"
-                                 Foreground="Black">
+                                 Foreground="Black"
+                                 Click="Button_Click">
                                 <StackPanel Margin="-5">
                                     <materialDesign:PackIcon Kind="ExitToApp" />
                                 </StackPanel>
@@ -118,7 +119,10 @@
                 </Grid>
 
                 <Grid Grid.Column="1" Background="#F6F5F8" Name="RenderPages">
-                    <userControl:Dashboard />
+                    <userControl:Dashboard 
+                        BottomImage="/Images/profile.jpg"
+                        TopImage="/Images/profile.jpg"
+                        />
                 </Grid>
             </Grid>
         </materialDesign:Card>
