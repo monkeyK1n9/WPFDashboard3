@@ -187,10 +187,22 @@
                             </StackPanel>
                         </Grid>
 
-                        <lvc:CartesianChart Series="{Binding SeriesCollection}"
-                                            Foreground="Black"
-                                            Margin="10, 0"
-                                            Height="200" />
+                        <lvc:CartesianChart
+                            Foreground="Black"
+                            Margin="10, 0"
+                            Height="200" >
+                            <lvc:CartesianChart.Series>
+                                <lvc:LineSeries
+                                    Stroke="#7166F9"
+                                    Values="11, 73, 57, 30, 67, 55, 86, 45" />
+                                <lvc:LineSeries
+                                    Stroke="SeaGreen"
+                                    Values="52.65,86.26,64.55,44.99,88.63,37.08,87.93,56.31" />
+                                <lvc:LineSeries
+                                    Stroke="Red"
+                                    Values="60.82, 75.14, 42.33, 91.07, 39.28, 53.96, 79.51, 68.45" />
+                            </lvc:CartesianChart.Series>
+                        </lvc:CartesianChart>
                     </StackPanel>
                 </materialDesign:Card>
 
@@ -364,11 +376,16 @@
                                 FontSize="18"/>
                             <lvc:CartesianChart 
                                 Margin="0, 5"
-                                Series="{Binding LastHourSeries}"
                                 Hoverable="False"
                                 DataTooltip="{x:Null}"
                                 Height="160"
-                                Width="160" />
+                                Width="160" >
+                                <lvc:CartesianChart.Series>
+                                    <lvc:LineSeries
+                                         Fill="#FFE8E8E8"
+                                         Values="64.19,49.88,67.59,87.32,47.72,47.72,88.58,70.29" />
+                                </lvc:CartesianChart.Series>
+                            </lvc:CartesianChart>
                             <materialDesign:PackIcon Kind="ArrowUp" HorizontalAlignment="Center" Margin="0, 5" Width="20" Height="20" Foreground="#4FFFFFFF" />
                         </StackPanel>
                     </materialDesign:Card>
@@ -390,11 +407,16 @@
                                 FontSize="18"/>
                             <lvc:CartesianChart 
                                 Margin="0, 5"
-                                Series="{Binding LastHourSeries}"
                                 Hoverable="False"
                                 DataTooltip="{x:Null}"
                                 Height="160"
-                                Width="160" />
+                                Width="160" >
+                                <lvc:CartesianChart.Series>
+                                    <lvc:LineSeries
+                                         Fill="#FFE8E8E8"
+                                         Values="11, 73, 57, 30, 67, 55, 86, 45" />
+                                </lvc:CartesianChart.Series>
+                            </lvc:CartesianChart>
                             <materialDesign:PackIcon Kind="ArrowUp" HorizontalAlignment="Center" Margin="0, 5" Width="20" Height="20" Foreground="#4FFFFFFF" />
                         </StackPanel>
                     </materialDesign:Card>
