@@ -1,0 +1,144 @@
+﻿<UserControl x:Class="WPFDashboard3.UserControls.Dashboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFDashboard3.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1100">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.Resources>
+            <Style TargetType="materialDesign:PackIcon">
+                <Setter Property="Width" Value="30" />
+                <Setter Property="Height" Value="30" />
+            </Style>
+        </Grid.Resources>
+
+        <Grid Grid.Column="0" Background="#F6F6F8">
+            <StackPanel Margin="10">
+                <Grid Height="60">
+                    <Button 
+                        Style="{StaticResource MaterialDesignFloatingActionButton}" 
+                        HorizontalAlignment="Left"
+                        BorderBrush="{x:Null}"
+                        Background="{x:Null}">
+                        <StackPanel Margin="-5">
+                            <materialDesign:PackIcon Kind="ReorderHorizontal" Foreground="Gray" />
+                        </StackPanel>
+                    </Button>
+
+                    <ComboBox HorizontalAlignment="Right" Width="100">
+                        <ComboBoxItem>
+                            <TextBlock Text="Last 15 Days" />
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <TextBlock Text="Last 15 Days" />
+                        </ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+
+                <WrapPanel HorizontalAlignment="Center">
+                    <Border BorderBrush="White" BorderThickness="4" Margin="20, 0" CornerRadius="15">
+                        <materialDesign:Card 
+                            materialDesign:ElevationAssist.Elevation="Dp0" 
+                            UniformCornerRadius="15" 
+                            BorderThickness="5"
+                            BorderBrush="White"
+                            Width="110"
+                            Height="130"
+                            Background="#F6F6F8">
+                            <StackPanel Margin="10">
+                                <materialDesign:PackIcon Kind="Twitter" Foreground="#29A3EC" />
+                                <TextBlock
+                                    FontWeight="SemiBold"
+                                    FontSize="25"
+                                    Text="280k"
+                                    Margin="0, 10, 0, 0"/>
+                                <TextBlock FontSize="12" Text="Followers" />
+                                <materialDesign:PackIcon Kind="EllipsisHorizontal" HorizontalAlignment="Right" />
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="4" Margin="20, 0" CornerRadius="15">
+                        <materialDesign:Card 
+                            materialDesign:ElevationAssist.Elevation="Dp0" 
+                            UniformCornerRadius="15" 
+                            BorderThickness="5"
+                            BorderBrush="White"
+                            Width="110"
+                            Height="130"
+                            Background="#F6F6F8">
+                            <StackPanel Margin="10">
+                                <materialDesign:PackIcon Kind="Instagram">
+                                    <materialDesign:PackIcon.Foreground>
+                                        <LinearGradientBrush
+                                            StartPoint="1,0"
+                                            EndPoint="0.5,1">
+                                            <GradientStop Color="#912A73"  Offset="0" />
+                                            <GradientStop Color="#FA8E22"  Offset="1" />
+                                        </LinearGradientBrush>
+                                    </materialDesign:PackIcon.Foreground>
+                                </materialDesign:PackIcon>
+                                <TextBlock
+                                    FontWeight="SemiBold"
+                                    FontSize="25"
+                                    Text="463k"
+                                    Margin="0, 10, 0, 0"/>
+                                <TextBlock FontSize="12" Text="Followers" />
+                                <materialDesign:PackIcon Kind="EllipsisHorizontal" HorizontalAlignment="Right" />
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="4" Margin="20, 0" CornerRadius="15">
+                        <materialDesign:Card 
+                            materialDesign:ElevationAssist.Elevation="Dp0" 
+                            UniformCornerRadius="15" 
+                            BorderThickness="5"
+                            BorderBrush="White"
+                            Width="110"
+                            Height="130"
+                            Background="#F6F6F8">
+                            <StackPanel Margin="10">
+                                <materialDesign:PackIcon Kind="Youtube" Foreground="Red" />
+                                <TextBlock
+                                    FontWeight="SemiBold"
+                                    FontSize="25"
+                                    Text="57k"
+                                    Margin="0, 10, 0, 0"/>
+                                <TextBlock FontSize="12" Text="Followers" />
+                                <materialDesign:PackIcon Kind="EllipsisHorizontal" HorizontalAlignment="Right" />
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="4" Margin="20, 0" CornerRadius="15">
+                        <materialDesign:Card 
+                            materialDesign:ElevationAssist.Elevation="Dp0" 
+                            UniformCornerRadius="15" 
+                            BorderThickness="5"
+                            BorderBrush="White"
+                            Width="110"
+                            Height="130"
+                            Background="#F6F6F8">
+                            <StackPanel Margin="10">
+                                <materialDesign:PackIcon Kind="Facebook" Foreground="#29A3EC" />
+                                <TextBlock
+                                    FontWeight="SemiBold"
+                                    FontSize="25"
+                                    Text="1.9M"
+                                    Margin="0, 10, 0, 0"/>
+                                <TextBlock FontSize="12" Text="Followers" />
+                                <materialDesign:PackIcon Kind="EllipsisHorizontal" HorizontalAlignment="Right" />
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </Border>
+                </WrapPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

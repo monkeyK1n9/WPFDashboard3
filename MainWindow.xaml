@@ -115,6 +115,10 @@
                         </ListViewItem>
                     </ListView>
                 </Grid>
+
+                <Grid Grid.Column="1" Background="#F6F5F8" Name="RenderPages">
+                    
+                </Grid>
             </Grid>
         </materialDesign:Card>
 
