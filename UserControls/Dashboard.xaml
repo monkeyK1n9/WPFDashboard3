@@ -7,7 +7,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
-             d:DesignHeight="900" d:DesignWidth="1100">
+             d:DesignWidth="1100">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8*" />
@@ -402,7 +402,7 @@
             </StackPanel>
         </Grid>
 
-        <Grid Grid.Column="1" Background="White">
+        <StackPanel Grid.Column="1" Background="White">
             <WrapPanel VerticalAlignment="Top" Margin="20, 20, 20, 10">
                 <Button
                     Style="{StaticResource MaterialDesignFloatingActionButton}"
@@ -434,10 +434,45 @@
                     BorderBrush="{x:Null}"
                     Foreground="Black">
                     <StackPanel Margin="-5">
-                        <materialDesign:PackIcon Kind="BellOutline" />
+                        <materialDesign:PackIcon Kind="AccountOutline" />
                     </StackPanel>
                 </Button>
             </WrapPanel>
-        </Grid>
+
+            <Border 
+                Margin="40, 10"
+                CornerRadius="20"
+                Background="#FFFFEEFA">
+                <Image
+                    Source="/Images/manwork.png"
+                    Stretch="Uniform"
+                    Height="150" />
+            </Border>
+
+            <Calendar 
+                Margin="45, 10"/>
+            <materialDesign:Card 
+                Margin="20, 10"
+                Padding="5"
+                UniformCornerRadius="20"
+                HorizontalAlignment="Center">
+                <WrapPanel Margin="10">
+                    <materialDesign:PackIcon 
+                        Kind="HandPeace"
+                        Foreground="#FFC83D"
+                        VerticalAlignment="Center"
+                        Margin="10, 0"/>
+                    <TextBlock
+                        Margin="10, 0"
+                        VerticalAlignment="Center">
+                        <TextBlock.Inlines>
+                            <Run Text="Say Hi to" />
+                            <Run Text="King" FontWeight="SemiBold" FontSize="14"/>
+                        </TextBlock.Inlines>
+                    </TextBlock>
+                    <Image Source="/Images/profile.jpg" Width="30" Height="30"/>
+                </WrapPanel>
+            </materialDesign:Card>
+        </StackPanel>
     </Grid>
 </UserControl>

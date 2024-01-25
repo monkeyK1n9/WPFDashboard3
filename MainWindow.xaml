@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFDashboard3"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:userControl="clr-namespace:WPFDashboard3.UserControls"
         mc:Ignorable="d"
 	    Height="900"
 	    Width="1350"
@@ -117,7 +118,7 @@
                 </Grid>
 
                 <Grid Grid.Column="1" Background="#F6F5F8" Name="RenderPages">
-                    
+                    <userControl:Dashboard />
                 </Grid>
             </Grid>
         </materialDesign:Card>
