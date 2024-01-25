@@ -4,24 +4,119 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFDashboard3"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow"
-	    Height="700"
+	    Height="900"
 	    Width="1350"
         MinWidth="640"
         MinHeight="480"
 	    x:Name="ResponsiveWindow"
 	    WindowStyle="None"
 	    AllowsTransparency="True"
-		ResizeMode="CanResizeWithGrip"
+		ResizeMode="NoResize"
 		WindowStartupLocation="CenterScreen"
-        Background="Transparent">
+        Background="{x:Null}">
     <Grid>
-        <Border
-            Background="#282033"
-            BorderBrush="#3A4149"
-            BorderThickness="5"
-            CornerRadius="8, 8, 0, 8" />
+        <materialDesign:Card Margin="10" UniformCornerRadius="15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="15*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.Resources>
+                    <Style TargetType="materialDesign:PackIcon">
+                        <Setter Property="Width" Value="30" />
+                        <Setter Property="Height" Value="30" />
+                    </Style>
+                </Grid.Resources>
+
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="120" />
+                    </Grid.RowDefinitions>
+                    
+                    <ListView Margin="0, 15">
+                        <ListViewItem HorizontalAlignment="Center" Margin="0, 10">
+                            <Button 
+                                Style="{StaticResource MaterialDesignFloatingActionButton}" 
+                                HorizontalAlignment="Left"
+                                BorderBrush="{x:Null}"
+                                Background="{x:Null}"
+                                Foreground="Black">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="Resistor" />
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem HorizontalAlignment="Center" Margin="0">
+                            <Button 
+                                 Style="{StaticResource MaterialDesignFloatingActionButton}" 
+                                 HorizontalAlignment="Left"
+                                 BorderBrush="{x:Null}"
+                                 Background="{x:Null}"
+                                 Foreground="Black">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="CircleSlice6" />
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem HorizontalAlignment="Center" Margin="0, 10">
+                            <Button 
+                                 Style="{StaticResource MaterialDesignFloatingActionButton}" 
+                                 HorizontalAlignment="Left"
+                                 BorderBrush="{x:Null}"
+                                 Background="{x:Null}"
+                                 Foreground="Black">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="CalendarBlankOutline" />
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem HorizontalAlignment="Center" Margin="0">
+                            <Button 
+                                 Style="{StaticResource MaterialDesignFloatingActionButton}" 
+                                 HorizontalAlignment="Left"
+                                 BorderBrush="{x:Null}"
+                                 Background="{x:Null}"
+                                 Foreground="Black">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="EqualiserVertical" />
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                        <ListViewItem HorizontalAlignment="Center" Margin="0, 10">
+                            <Button 
+                                 Style="{StaticResource MaterialDesignFloatingActionButton}" 
+                                 HorizontalAlignment="Left"
+                                 BorderBrush="{x:Null}"
+                                 Background="{x:Null}"
+                                 Foreground="Black">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="ChatOutline" />
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                    </ListView>
+
+                    <ListView Grid.Row="1">
+                        <ListViewItem HorizontalAlignment="Center" Margin="0, 10">
+                            <Button 
+                                 Style="{StaticResource MaterialDesignFloatingActionButton}" 
+                                 HorizontalAlignment="Left"
+                                 BorderBrush="{x:Null}"
+                                 Background="{x:Null}"
+                                 Foreground="Black">
+                                <StackPanel Margin="-5">
+                                    <materialDesign:PackIcon Kind="ExitToApp" />
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                    </ListView>
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
 
     </Grid>
 </Window>
