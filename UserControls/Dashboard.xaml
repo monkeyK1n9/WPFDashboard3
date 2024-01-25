@@ -346,9 +346,98 @@
                         </StackPanel>
                     </materialDesign:Card>
 
-                    
+                    <materialDesign:Card 
+                        Margin="10"
+                        UniformCornerRadius="20"
+                        Background="#633648">
+                        <StackPanel Margin="10">
+                            <TextBlock
+                                Text="Engaged Users" 
+                                FontSize="14"
+                                Foreground="White"
+                                TextAlignment="Center"/>
+                            <TextBlock
+                                Text="12.5k"
+                                TextAlignment="Center"
+                                Margin="0, 5"
+                                Foreground="White"
+                                FontSize="18"/>
+                            <lvc:CartesianChart 
+                                Margin="0, 5"
+                                Series="{Binding LastHourSeries}"
+                                Hoverable="False"
+                                DataTooltip="{x:Null}"
+                                Height="160"
+                                Width="160" />
+                            <materialDesign:PackIcon Kind="ArrowUp" HorizontalAlignment="Center" Margin="0, 5" Width="20" Height="20" Foreground="#4FFFFFFF" />
+                        </StackPanel>
+                    </materialDesign:Card>
+                    <materialDesign:Card 
+                        Margin="10"
+                        UniformCornerRadius="20"
+                        Background="#633648">
+                        <StackPanel Margin="10">
+                            <TextBlock
+                                Text="Page impressions" 
+                                FontSize="14"
+                                Foreground="White"
+                                TextAlignment="Center"/>
+                            <TextBlock
+                                Text="34M views"
+                                TextAlignment="Center"
+                                Margin="0, 5"
+                                Foreground="White"
+                                FontSize="18"/>
+                            <lvc:CartesianChart 
+                                Margin="0, 5"
+                                Series="{Binding LastHourSeries}"
+                                Hoverable="False"
+                                DataTooltip="{x:Null}"
+                                Height="160"
+                                Width="160" />
+                            <materialDesign:PackIcon Kind="ArrowUp" HorizontalAlignment="Center" Margin="0, 5" Width="20" Height="20" Foreground="#4FFFFFFF" />
+                        </StackPanel>
+                    </materialDesign:Card>
                 </WrapPanel>
             </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="White">
+            <WrapPanel VerticalAlignment="Top" Margin="20, 20, 20, 10">
+                <Button
+                    Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}"
+                    Foreground="Black">
+                    <StackPanel Margin="-5">
+                        <materialDesign:PackIcon Kind="BellOutline" />
+                    </StackPanel>
+                </Button>
+                <Button
+                    Background="#FFFFEEFA"
+                    BorderBrush="#FFFFEEFA"
+                    Foreground="#FFF0689E"
+                    Margin="10, 0"
+                    Height="40">
+                    <WrapPanel HorizontalAlignment="Center">
+                        <materialDesign:PackIcon Kind="Gift" Width="25" Height="25" />
+                        <TextBlock
+                            Text="2 New Updates"
+                            VerticalAlignment="Center"
+                            FontWeight="SemiBold"
+                            Margin="10, 0"/>
+                    </WrapPanel>
+                </Button>
+                <Button
+                    Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    Background="{x:Null}"
+                    BorderBrush="{x:Null}"
+                    Foreground="Black">
+                    <StackPanel Margin="-5">
+                        <materialDesign:PackIcon Kind="BellOutline" />
+                    </StackPanel>
+                </Button>
+            </WrapPanel>
         </Grid>
     </Grid>
 </UserControl>
