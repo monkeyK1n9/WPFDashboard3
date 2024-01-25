@@ -194,7 +194,160 @@
                     </StackPanel>
                 </materialDesign:Card>
 
-                
+                <WrapPanel
+                    HorizontalAlignment="Center">
+                    <materialDesign:Card 
+                        Margin="10"
+                        UniformCornerRadius="20"
+                        Padding="10">
+                        <StackPanel>
+                            <TextBlock
+                                Text="Key Metrics"
+                                Margin="10, 20"
+                                FontWeight="SemiBold" />
+
+                            <Grid Height="150">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock
+                                    Text="Clicks"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="13"
+                                    FontWeight="SemiBold" />
+                                <TextBlock
+                                    Text="Likes"
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="13"
+                                    FontWeight="SemiBold" />
+                                <TextBlock
+                                    Text="Followers"
+                                    Grid.Column="0"
+                                    Grid.Row="2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="13"
+                                    FontWeight="SemiBold" />
+                                <TextBlock
+                                    Text="Impressions"
+                                    Grid.Column="0"
+                                    Grid.Row="3"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="13"
+                                    FontWeight="SemiBold" />
+
+                                <StackPanel
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Orientation="Horizontal">
+                                    <TextBlock
+                                        Text="10k"
+                                        FontWeight="SemiBold"
+                                        Margin="5, 0" />
+                                    <ProgressBar
+                                        Margin="5, 0"
+                                        Width="100"
+                                        Height="8"
+                                        Foreground="#FFFFFF13"
+                                        Background="#FFE8E8E8"
+                                        BorderBrush="#FFF3F349"
+                                        Value="78" />
+                                    <TextBlock
+                                        Text="12k"
+                                        FontWeight="SemiBold" />
+                                </StackPanel>
+
+                                <StackPanel
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Orientation="Horizontal">
+                                    <TextBlock
+                                        Text="10k"
+                                        FontWeight="SemiBold"
+                                        Margin="5, 0" />
+                                    <ProgressBar
+                                        Margin="5, 0"
+                                        Width="100"
+                                        Height="8"
+                                        Foreground="Blue"
+                                        Background="#FFE8E8E8"
+                                        BorderBrush="#FFF3F349"
+                                        Value="78" />
+                                    <TextBlock
+                                        Text="12k"
+                                        FontWeight="SemiBold" />
+                                </StackPanel>
+
+                                <StackPanel
+                                    Grid.Column="1"
+                                    Grid.Row="2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Orientation="Horizontal">
+                                    <TextBlock
+                                        Text="10k"
+                                        FontWeight="SemiBold"
+                                        Margin="5, 0" />
+                                    <ProgressBar
+                                        Margin="5, 0"
+                                        Width="100"
+                                        Height="8"
+                                        Foreground="SeaGreen"
+                                        Background="#FFE8E8E8"
+                                        BorderBrush="#FFF3F349"
+                                        Value="78" />
+                                    <TextBlock
+                                        Text="12k"
+                                        FontWeight="SemiBold" />
+                                </StackPanel>
+                                <StackPanel
+                                    Grid.Column="1"
+                                    Grid.Row="3"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Orientation="Horizontal">
+                                    <TextBlock
+                                        Text="10k"
+                                        FontWeight="SemiBold"
+                                        Margin="5, 0" />
+                                    <ProgressBar
+                                        Margin="5, 0"
+                                        Width="100"
+                                        Height="8"
+                                        Foreground="Violet"
+                                        Background="#FFE8E8E8"
+                                        BorderBrush="SeaGreen"
+                                        Value="78" />
+                                    <TextBlock
+                                        Text="12k"
+                                        FontWeight="SemiBold" />
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </materialDesign:Card>
+
+                    
+                </WrapPanel>
             </StackPanel>
         </Grid>
     </Grid>
