@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFDashboard3.UserControls"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1100">
     <Grid>
@@ -138,6 +139,62 @@
                         </materialDesign:Card>
                     </Border>
                 </WrapPanel>
+
+                <materialDesign:Card Margin="30, 20" UniformCornerRadius="20">
+                    <StackPanel>
+                        <Grid>
+                            <TextBlock
+                                Margin="20"
+                                HorizontalAlignment="Left"
+                                FontWeight="SemiBold"
+                                Text="Instagram Subscribers"
+                                FontSize="18" />
+                            
+                            <StackPanel
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Right">
+                                
+                                <TextBlock
+                                    FontWeight="ExtraBold"
+                                    FontSize="14"
+                                    Text="&#xF06C;"
+                                    FontFamily="Wingdings"
+                                    VerticalAlignment="Center"
+                                    Foreground="#42A5F4"/>
+                                <TextBlock
+                                    Text="Gained"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    FontWeight="SemiBold"
+                                    FontSize="14"
+                                    Margin="5, 0, 10, 0"/>
+
+                                <TextBlock
+                                    FontWeight="ExtraBold"
+                                    FontSize="14"
+                                    Text="&#xF06C;"
+                                    FontFamily="Wingdings"
+                                    VerticalAlignment="Center"
+                                    Foreground="#F55F54"/>
+                                <TextBlock
+                                    Text="Lost"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center"
+                                    FontWeight="SemiBold"
+                                    FontSize="14"
+                                    Margin="5, 0, 20, 0"/>
+
+                            </StackPanel>
+                        </Grid>
+
+                        <lvc:CartesianChart Series="{Binding SeriesCollection}"
+                                            Foreground="Black"
+                                            Margin="10, 0"
+                                            Height="200" />
+                    </StackPanel>
+                </materialDesign:Card>
+
+                
             </StackPanel>
         </Grid>
     </Grid>
